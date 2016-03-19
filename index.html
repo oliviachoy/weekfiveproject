@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Food Date in Toronto</title>
+	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Quicksand:400,300' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Londrina+Outline' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="style/animate.css">
+	<link rel="stylesheet" href="style/main.css">
+	<link rel="shortcut icon" href="images/fork.png">
+	
+
+</head>
+<body>
+	<div class="wrapper">
+		<div class="content">
+			<header>
+				<h1>F<i class="fa fa-heart-o animated infinite pulse "></i><i class="fa fa-heart-o animated infinite pulse"></i>d Date in <span>Toronto</span></h1>
+				<p>Need a dinner date idea? See what's open in any area right now!</p>
+			</header>
+
+		 	<form id="getAllInformation">
+			<div class="flexContainer">
+				<section id="priceOfDate">
+					<h2>whatcha wanna spend?</h2>
+					<div class="price">
+					<label>$ </label><input type="checkbox" class="priceOfDate" value="1" name="price">
+					<label>$$</label><input type="checkbox" class="priceOfDate"
+					value="2" name="price">
+					<label>$$$ </label><input type="checkbox" class="priceOfDate" value="3" name="price">
+					<label>$$$$ </label><input type="checkbox" class="priceOfDate" value="4" name="price">
+					</div>
+				</section>
+
+				<section class="typeOfFood">
+					<h2>whatcha craving?</h2>
+				  <label for="foodChoice">choose your cuisine</label>
+				  <select name="foodChoice" id="foodChoice">
+				 	<option value="american">American</option>
+				 	<option value="breakfast">Breakfast</option>
+				 	<option value="brunch">Brunch</option>
+				 	<option value="canadian">Canadian</option>
+				 	<option value="caribbean">Caribbean</option>
+				    <option value="chinese">Chinese</option>
+				    <option value="cafe">Cafe</option>
+				    <option value="dessert">Desserts</option>
+				    <option value="drinks">Drinks</option>
+				    <option value="french">French</option>
+				    <option value="greek">Greek</option>
+				    <option value="indian">Indian</option>
+				    <option value="irish">Irish</option>
+				    <option value="italian">Italian</option>
+				    <option value="japanese">Japanese</option>
+				    <option value="korean">Korean</option>
+				    <option value="middle eastern">Middle Eastern</option>
+				    <option value="mexican">Mexican</option>
+				    <option value="spanish">Spanish</option>
+				    <option value="thai">Thai</option>
+				    <option value="vegan">Vegan</option>
+				    <option value="vegetarian">Vegetarian</option>
+				  </select>
+				 </section>
+			</div>
+				<section id="currentLocation" class="currentLocation">
+				 	<h2>where are you??</h2>
+						<input type="text" class="location" name="location" placeholder="enter your location">
+				</section>
+				<section class="button">
+					<a href="#map"><input type="submit" class="submitButton" value="let's eat!"></a>
+					<input type="reset" class="reset" value="reset">
+				</section>
+			</form>
+			<div id="wrapper2">
+				<div id="map"></div>
+			</div>
+			<div id="food" class="food"></div>
+			<footer>
+				<p>Designed and Developed by <a href="http://oliviachoy.com">Olivia Choy</a></p>
+			</footer>
+		</div>
+	</div>
+	
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/1.7.2/jquery.smooth-scroll.min.js"></script>
+
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1-LzfPtc33MWQG7FwjQxq826Qijd_cHg&callback=initMap">
+    </script>
+
+
+
+	<script src="js/app.js"></script>
+</body>
+</html>

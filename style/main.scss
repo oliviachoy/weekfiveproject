@@ -1,0 +1,314 @@
+@import "partials/_reset.scss";
+
+$brightPink: #FF297B;
+$darkGrey: #515151;
+$lightgrey: #C6C6C6;
+$bodyFont: 'Montserrat', sans-serif;
+// $skinnyFont: 'Quicksand', sans-serif;
+$font2: 'Londrina Outline', cursive;
+
+ body  {
+ 	background-image: url(../images/blackandwhite.jpg);
+ 	background-position: center;
+ 	background-size: cover;
+ 	background-attachment: fixed;
+ 	font-family: $bodyFont;
+ 	color: $darkGrey;
+ 	// cursor: url("../images/fork.png"), default;
+ 	position: relative;
+ }
+.wrapper2 {
+	min-height: 485px;
+}
+
+.clear {
+	display: none;
+}
+
+#map { 
+
+	height: 60vh;
+	width: 100%;
+ }
+
+html {
+	font: 62.5%;
+}
+.wrapper {
+	max-width: 1200px;
+	margin: 4rem auto;
+	background-color: rgba(79, 79, 79, .95);
+	@media(max-width: 900px) {
+		margin: 0 auto;
+		background-color: rgba(79,79,79, .89)
+	}
+}
+
+.content {
+	width: 90%;
+	margin: 0 auto;
+}
+ header {
+ 	text-align: center;	
+ 	margin-top: 1rem;
+ 	color: #DBDBDB;
+ 	@media(max-width: 1000px) {
+ 		margin-top: 0;
+ 	}
+ 	h1 {
+ 		text-transform: uppercase;
+ 		margin: 0 0 20px 0;
+ 		letter-spacing: 4px;
+ 		font-size: 3.5rem;
+ 		font-family: $bodyFont;
+ 		@media (max-width: 768px) {
+ 			padding-top: 3rem;
+ 		}
+ 		@media (max-width: 480px) {
+ 			font-size: 2.8rem;
+ 		}
+ 		@media (max-width: 400px) {
+ 			font-size: 2rem;
+ 		}
+ 		i {
+ 			color: $brightPink;
+ 		}
+ 		span {
+ 			color: $brightPink;
+ 			font-family: $font2;
+ 			font-size: 6rem;
+ 			letter-spacing: .4rem;
+ 			@media (max-width: 480px) {
+ 				font-size: 5rem;
+ 			}
+ 		}
+ 	}
+ 	p {
+		font-size: .9rem;
+		margin: 0;
+		text-transform: uppercase;
+		letter-spacing: 3px;
+		line-height: 35px;
+		color: #DBDBDB;
+		@media (max-width: 795px) {
+			padding: 0 1.5rem;
+		}
+		@media (max-width: 480px) {
+			line-height: normal;
+		}
+ 	}
+ }
+
+ form {
+ 	h2 {
+ 		font-size: 1.6rem;
+ 		color: $brightPink;
+ 		font-weight: 500;
+ 		font-family: $bodyFont;
+ 		@media (max-width: 340px){
+ 			font-size: 1.5rem;
+ 		}
+ 	}
+ }
+
+ .flexContainer {
+ 	display: flex;
+ 	justify-content: space-around;
+ 	@media (max-width: 894px) {
+ 		display: block;
+ 	}
+ }
+
+ #priceOfDate{
+ 	.price {
+ 		display: flex;
+ 		align-items: center;
+ 		color: #DBDBDB;
+ 		@media (max-width: 898px){
+ 			margin: 0 auto;
+ 			width: 71%;
+ 			flex-wrap: wrap;
+ 			justify-content: space-between;
+ 		}
+ 		@media (max-width: 480px){
+ 			width: 100%;
+ 		}
+ 	}
+ 	label {
+ 	font-weight: 500;
+ 	font-size: 1.6rem;
+ 	padding-left: 3rem;
+ 		@media (max-width:676px) {
+ 			padding: 0;
+ 		}
+ 		@media (max-width: 340px){
+			font-size: 1rem;
+			padding-left: 10px;
+		}
+ 		
+ 	}
+ }
+
+.typeOfFood {
+	label {
+		font-size: 1.4rem;
+		letter-spacing: 1px;
+		color: $lightgrey;
+	}
+	select option {
+		background-color: $brightPink;
+		color: $lightgrey;
+	}
+}
+
+.currentLocation {
+	input {
+		padding: 10px 20px;
+		text-align: center;
+		&:focus {
+			outline: none;
+			border: 1px solid $brightPink;
+		}
+	}
+}
+
+.button {
+	text-align: center;
+	font-size: 1.6rem;
+	margin: 0 auto;
+	width: 50%;
+	padding: 2rem 0;
+	font-family: $bodyFont;
+	display: flex;
+	justify-content: space-between;
+	@media(max-width: 1200px) {
+		width: 80%;
+	}
+
+	@media (max-width: 768px) {
+		width: 100%;
+	}
+	@media (max-width: 480px) {
+		width: 100%;
+		flex-direction: column;
+		margin-left: 0;
+	}
+	.submitButton, .reset {
+		padding: 10px 20px;
+		color: $lightgrey;
+		background-color: $brightPink;
+		font-family: $font2;
+		font-size: 3.5rem;
+		font-weight: bold;
+		border-style: none;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		@media (max-width: 500px) {
+			width: 100%;
+			font-size: 2.5rem;
+		}
+		@media (max-width: 1053px) {
+		   	justify-content: space-around;
+		}
+		&:hover {
+			background-color: $lightgrey;
+			color: $brightPink;
+		}
+	}
+	.reset {
+		color: $brightPink;
+		background-color: $lightgrey;
+		&:hover {
+			background-color: $brightPink;
+			color:$lightgrey;
+		}
+		
+		@media (max-width: 645px) {
+			margin-left: 1rem;
+		}
+		@media (max-width: 500px) {
+			margin-left: 0;
+			margin-top: 1rem;
+		}
+	}
+}
+
+section {
+	text-align: center;
+	font-family: $bodyFont;
+	letter-spacing: 2px;
+	padding: 2rem;
+	@media (max-width: 768px) {
+		padding: 1.8rem;
+		
+	}
+	@media (max-width: 400px) {
+		padding: 1rem;
+	}
+
+ }
+	
+
+.food  {
+	display: flex;
+	flex-wrap: wrap;
+	// justify-content: center;
+	@media (max-width: 480px) {
+    	display: block;
+    	width: 90%;
+    	margin: 0 auto;
+    }
+}
+
+ .foodanswer {
+ 	text-align: center;
+    width: 33.33%;
+    color: $darkGrey;
+    padding: 1rem 0;
+    background: #C4C4C4;
+    @media (max-width: 768px){
+    	width: 50%;
+    }
+    @media (max-width: 600px) {
+    	width: 85%;
+    	margin: 1rem auto;
+    }
+ 	h3 {
+ 		color: $brightPink;
+ 		text-transform: uppercase;
+ 	}
+ 	img {
+ 		display: block;
+ 		margin: 0 auto;
+ 		padding-top: 1.5rem;
+ 		max-width: 100%;
+ 	}
+ 	a {
+ 		text-decoration: none;
+ 		color: $brightPink;
+ 	}
+ 	p {
+ 		font-size: .8rem;
+ 	}
+ }
+
+footer {
+	padding-top: 1rem;
+	p{
+		color: $lightgrey;
+		margin: 0;
+		text-align: center;
+		font-size: .9rem;
+		a{
+			text-decoration: none;
+			color: $brightPink;
+			font-family: $font2;
+			font-weight: bold;
+			font-size: 1.5rem;
+			letter-spacing: .2rem;
+			@media (max-width: 480px) {
+				display: block;
+			}
+		}
+	}
+}
